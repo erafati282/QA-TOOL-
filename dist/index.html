@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#172149" />
+  <title>AssureHub — Application quality</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/enhancements.css" />
+</head>
+<body>
+  <a class="skip-link" id="skip-link" href="#login-title">Skip to sign in</a>
+  <main class="login-screen" id="login-screen">
+    <section class="login-card" aria-labelledby="login-title">
+      <img class="login-logo" src="/assets/umniah-logo.png" alt="Umniah by Beyon" />
+      <div class="login-eyebrow">APPLICATION QUALITY</div>
+      <h1 id="login-title">Sign in to AssureHub</h1>
+      <p class="login-intro">Continue to the Umniah engineering workspace.</p>
+      <form id="login-form" class="login-form">
+        <label for="login-username">Username</label>
+        <input id="login-username" name="username" autocomplete="username" required autofocus />
+        <label for="login-password">Password</label>
+        <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+        <button class="login-submit" type="submit">Sign in</button>
+      </form>
+      <div class="login-demo-note"><b>Prototype sign-in</b><br />Enter any username and password to continue. Credentials are not verified or sent to an authentication service.</div>
+    </section>
+  </main>
+  <div class="app-shell" id="app-shell" hidden>
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview" aria-label="AssureHub by Umniah home">
+        <img class="brand-logo" src="/assets/umniah-logo.png" alt="Umniah by Beyon" />
+        <span class="brand-caption">APPLICATION QUALITY</span>
+      </a>
+      <div class="workspace-switch"><span class="workspace-icon">U</span><span><b>Umniah Digital</b><small>Engineering workspace</small></span><span class="chevron">⌄</span></div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-page="overview"><span class="nav-icon">◫</span>Overview</button>
+        <button class="nav-item" data-page="applications"><span class="nav-icon">▦</span>Applications<span class="nav-count" id="nav-app-count">12</span></button>
+        <button class="nav-item" data-page="scenarios"><span class="nav-icon">◈</span>Scenario library</button>
+        <button class="nav-item" data-page="automation"><span class="nav-icon">✦</span>Automation</button>
+        <button class="nav-item" data-page="runs"><span class="nav-icon">▷</span>Test runs<span class="nav-count" id="nav-run-count">6</span></button>
+        <button class="nav-item" data-page="findings"><span class="nav-icon">⚑</span>Findings<span class="nav-count alert-count" id="nav-find-count">8</span></button>
+        <button class="nav-item" data-page="reports"><span class="nav-icon">▤</span>Reports</button>
+        <button class="nav-item" data-page="standards"><span class="nav-icon">◉</span>Test Standards</button>
+      </nav>
+      <div class="nav-label tools-label">MANAGE</div>
+      <nav class="main-nav">
+        <button class="nav-item" data-page="audit"><span class="nav-icon">≋</span>Audit &amp; Logs</button>
+        <button class="nav-item" data-page="integrations"><span class="nav-icon">⛓</span>Integrations</button>
+        <button class="nav-item" data-page="settings"><span class="nav-icon">⚙</span>Settings</button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-help"><span class="help-glyph">?</span><span><b>Need a hand?</b><small>Visit the help center</small></span><span class="help-arrow">↗</span></div>
+      <div class="user-profile"><div class="avatar" id="user-avatar">EA</div><span><b id="user-name">Erafati A.</b><small>Prototype session</small></span><button class="user-menu" id="logout-button" type="button" aria-label="Sign out">Sign out</button></div>
+    </aside>
+    <button class="sidebar-scrim" id="sidebar-scrim" aria-label="Close navigation"></button>
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">☰</button>
+        <div class="breadcrumbs"><span>Workspace</span><i>/</i><b id="crumb-title">Overview</b></div>
+        <div class="top-actions">
+          <div class="env-pill"><span class="pulse-dot"></span> DEMO ENVIRONMENT</div>
+          <button class="icon-button" aria-label="Notifications" id="notifications">♧<i class="notification-dot"></i></button>
+          <div class="top-avatar">EA</div>
+        </div>
+      </header>
+      <div class="page-wrap">
+        <div class="demo-banner"><span class="demo-icon">i</span><span><b>Demo workspace</b> — Sample applications, scenarios, test runs and findings. No live systems are connected.</span><button id="dismiss-banner" aria-label="Dismiss demo notice">×</button></div>
+        <section id="page-content" tabindex="-1" aria-live="polite"></section>
+      </div>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="assistant-root"></div>
+  <button class="assistant-launcher" aria-label="Open ESVIX chat" id="assistant-launcher" aria-expanded="false" aria-controls="assistant-panel"><span class="umniah-mark" aria-hidden="true"><i></i><i></i><i></i></span></button>
+  <div id="toast-root" class="toast-root" aria-live="polite"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
