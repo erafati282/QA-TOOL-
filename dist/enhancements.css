@@ -270,6 +270,7 @@ body{font-family:Inter,ui-sans-serif,system-ui,"Segoe UI",sans-serif;color:var(-
 .automation-results{display:grid;gap:12px}
 .automation-result-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:17px;border:1px solid #e7ebee;border-radius:11px;background:#fff}
 .automation-result-head p{max-width:780px;margin:6px 0 10px;color:#5f6e78;font-size:13px;line-height:1.55}
+.privacy-summary{display:block;margin-top:6px;color:#6f5d2a;font-size:11px;line-height:1.5}
 .automation-result-head>div:last-child{display:grid;justify-items:end;gap:8px;max-width:360px}
 .automation-result-head .automation-consent{margin:0;font-size:11px;line-height:1.45}
 .automation-audit-record{margin:12px 0;padding:16px}
